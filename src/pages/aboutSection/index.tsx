@@ -10,10 +10,8 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import profilePic from '/public/assets/pictures/my-pic.png'
-import { useTheme } from '@/theme/theme-provider'
 
 function About() {
-  const theme = useTheme();
   
   return (
     <div id='about' className="min-h-screen bg-background">
