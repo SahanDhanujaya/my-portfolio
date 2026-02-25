@@ -9,8 +9,7 @@ import {
   ShoppingCart,
   Heart,
   BookOpen,
-  Hotel,
-  ArrowRight,
+  Hotel
 } from 'lucide-react'
 
 const projects = [
