@@ -7,6 +7,7 @@ import Home from '../homeSection/Home'
 import About from '../aboutSection'
 import Experience from '../experienceSection'
 import Projects from '../projectSection'
+import Contact from '../contactSection'
 
 function Layout() {
   return (
@@ -21,7 +22,8 @@ function Layout() {
         <Home />
         <About />
         <Experience />  
-        <Projects />    
+        <Projects />  
+        <Contact />  
       </main>
 
       {/* Footer */}

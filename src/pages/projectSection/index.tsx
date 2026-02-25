@@ -222,23 +222,6 @@ function Projects() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative py-16 px-4 bg-muted/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 animate-fade-in-up">
-            Interested in Working Together?
-          </h2>
-          <p className="text-muted-foreground mb-8 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
-            I'm always open to discussing new projects and opportunities
-          </p>
-          <Button asChild size="lg" className="group animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            <a href="/contact">
-              Get in Touch
-              <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
-            </a>
-          </Button>
-        </div>
-      </section>
 
       <style>{`
         @keyframes float {

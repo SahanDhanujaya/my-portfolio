@@ -13,7 +13,7 @@ const navLinks = [
   { to: '/#experience', label: 'Experience' },
   { to: '/#services', label: 'Services' },
   { to: '/#projects', label: 'Projects' },
-  { to: '/#blog', label: 'Blog' },
+  { to: '/#contact', label: 'Contact' },
 ]
 
 function Navbar() {
