@@ -4,8 +4,43 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, MapPin, Phone, Send, X } from "lucide-react";
 import { useState } from "react";
 
+interface ContactForm {
+  fName: string;
+  lName: string;
+  email: string;
+  message: string;
+}
 const Contact = () => {
   const [activeForm, setActiveForm] = useState(false);
+  const [formData, setFormData] = useState<ContactForm>({
+    fName: "",
+    lName: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    const emailProps = {
+      from: formData.email,
+      subject: `Message from ${formData.fName} ${formData.lName}`,
+      text: formData.message,
+    }
+    await fetch("/send", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(emailProps),
+    });
+    setFormData({
+      fName: "",
+      lName: "",
+      email: "",
+      message: "",
+    });
+    setActiveForm(false);
+  };
 
   return (
     <section id="contact" className="relative overflow-hidden py-24 px-6 ">
@@ -84,7 +119,7 @@ const Contact = () => {
 
               {/* Form */}
               <div className="flex-1 p-8">
-                <form onSubmit={(e) => e.preventDefault()} className="space-y-4">
+                <form className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
                     <div className="flex flex-col gap-1">
                       <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">First Name</label>
@@ -94,6 +129,8 @@ const Contact = () => {
                                    bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100
                                    focus:outline-none focus:ring-2 focus:ring-violet-500 transition"
                         placeholder="eg: Jane"
+                        value={formData.fName}
+                        onChange={(e) => setFormData({ ...formData, fName: e.target.value })}
                       />
                     </div>
                     <div className="flex flex-col gap-1">
@@ -104,6 +141,8 @@ const Contact = () => {
                                    bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100
                                    focus:outline-none focus:ring-2 focus:ring-violet-500 transition"
                         placeholder="eg: Smith"
+                        value={formData.lName}
+                        onChange={(e) => setFormData({ ...formData, lName: e.target.value })}
                       />
                     </div>
                   </div>
@@ -116,6 +155,8 @@ const Contact = () => {
                                  bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100
                                  focus:outline-none focus:ring-2 focus:ring-violet-500 transition"
                         placeholder="eg: example@gmail.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
                   </div>
 
@@ -127,10 +168,12 @@ const Contact = () => {
                                  bg-zinc-50 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100
                                  focus:outline-none focus:ring-2 focus:ring-violet-500 transition resize-none"
                         placeholder="How can help you ?"
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     />
                   </div>
 
-                  <Button className="w-full py-6 rounded-xl text-lg group">
+                  <Button onClick={handleSubmit} className="w-full py-6 rounded-xl text-lg group">
                     Send Message
                     <Send className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-200" />
                   </Button>
