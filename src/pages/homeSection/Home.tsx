@@ -16,11 +16,14 @@ import {
   Cloud,
 } from "lucide-react";
 import profilePic from '/public/assets/pictures/my-pic.png'
+// import { HeroGallery } from "@/components/gallery/HeroGallery";
+// import { GravityStarsBackground } from "@/components/animate-ui/components/backgrounds/gravity-stars";
 // import {
 //   Code,
 //   CodeBlock,
 //   CodeHeader,
 // } from "@/components/animate-ui/components/animate/code";
+
 
 const features = [
   {
@@ -268,7 +271,7 @@ function Home() {
                 style={{ animationDelay: "0.45s" }}
               >
                 <Button asChild size="lg" className="group min-w-[160px]">
-                  <Link to="/projects">
+                  <Link to="/#projects">
                     View Projects
                     <ArrowRight className="ml-2 size-4 group-hover:translate-x-1 transition-transform duration-200" />
                   </Link>
@@ -279,7 +282,7 @@ function Home() {
                   size="lg"
                   className="group min-w-[160px]"
                 >
-                  <Link to="/contact">
+                  <Link to="/#contact">
                     <Mail className="mr-2 size-4 group-hover:scale-110 transition-transform duration-200" />
                     Get in Touch
                   </Link>
@@ -290,7 +293,7 @@ function Home() {
                 style={{ animationDelay: "0.6s" }}
               >
                 <a
-                  href="https://github.com"
+                  href="https://github.com/SahanDhanujaya"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"
@@ -299,7 +302,7 @@ function Home() {
                   <Github className="size-6" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/sahan-dhanujaya-040aa4359/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-foreground transition-colors"
@@ -327,30 +330,7 @@ function Home() {
                     alt="Profile"
                     className="w-full max-w-md h-auto object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-500"
                   />
-
-                  {/* <Code
-                  className="w-full max-w-md h-auto object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-500 dark:bg-white"
-                    code={`'use client';
- 
-import * as React from 'react';
-  
-type MyComponentProps = {
-  myProps: string;
-} & React.ComponentProps<'div'>;
-  
-function MyComponent(props: MyComponentProps) {
-  return (
-    <div {...props}>
-      <p>My Component</p>
-    </div>
-  );
-}
-
-export { MyComponent, type MyComponentProps };`}
-                  >
-                    <CodeHeader icon={CodeIcon} title="my-component.tsx"  className="dark:bg-white"/>
-                    <CodeBlock lang={"python"} />
-                  </Code> */}
+                  
                 </div>
 
                 {/* Floating accent dots */}

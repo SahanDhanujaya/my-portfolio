@@ -10,6 +10,7 @@ import {
   ArrowRight,
 } from 'lucide-react'
 import profilePic from '/public/assets/pictures/my-pic.png'
+// import { GravityStarsBackground } from '@/components/animate-ui/components/backgrounds/gravity-stars'
 
 function About() {
   
@@ -61,13 +62,13 @@ function About() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                 <Button asChild size="lg" className="group">
-                  <Link to="/experience">
+                  <Link to="/#experience">
                     View Experience
                     <ArrowRight className="ml-2 size-4 group-hover:translate-x-1 transition-transform duration-200" />
                   </Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <Link to="/contact">Contact Me</Link>
+                  <Link to="/#contact">Contact Me</Link>
                 </Button>
               </div>
             </div>
@@ -155,7 +156,7 @@ function About() {
           animation: fade-in-up 0.7s ease-out forwards;
           opacity: 0;
         }
-      `}</style>
+      `}</style> 
     </div>
   )
 }

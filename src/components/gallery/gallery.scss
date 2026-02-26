@@ -1,0 +1,80 @@
+@function gray($color){
+  @return rgb($color, $color, $color);
+}
+
+$shadow: rgba(0, 0, 0, 0.12) 0px 10px 30px, rgba(0, 0, 0, 0.16) 0px 6px 10px;
+
+#app {
+  background-color: gray(20); 
+  font-family: 'Cinzel', serif;
+  
+  #gallery-wrapper {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+    #gallery-frame {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 500px;
+      width: 500px;
+      position: relative;
+      z-index: 1;
+      
+      #gallery-photo-wrapper {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        left: 0px;
+        position: absolute; 
+        top: 0px;
+        width: 100%;
+        
+        #gallery-photo {
+          opacity: 0;
+        }
+      }
+    }
+      
+    #gallery-photo-bars {
+      height: 100vh;
+      left: 0px;
+      position: absolute;
+      top: 0px;
+      width: 100vw;
+      z-index: 2;
+      
+      .photo-bar {
+        box-shadow: $shadow; 
+        opacity: 0;
+        position: absolute;
+      }
+    }
+    
+    #gallery-cast-member {
+      align-items: center;
+      display: flex;
+      flex-shrink: 0;
+      height: 10vh;
+      justify-content: center;
+      left: 0px;
+      opacity: 0;
+      position: absolute;
+      top: 5vh;
+      width: 100vw;
+      z-index: 3;
+      
+      h1 {
+        color: white;
+        font-size: clamp(2em, 8vmin, 5em);        
+        text-align: center;
+      }
+    }
+  }
+}

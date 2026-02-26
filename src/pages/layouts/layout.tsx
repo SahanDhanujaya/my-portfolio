@@ -33,7 +33,7 @@ function Layout() {
             {/* Logo / Brand */}
             <div className="flex items-center gap-2">
               <Link
-                to="/"
+                to="/#"
                 className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
               >
                 Sahan Dhanujaya
@@ -44,25 +44,25 @@ function Layout() {
             {/* Quick links */}
             <nav className="flex items-center gap-6">
               <Link
-                to="/about"
+                to="/#about"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 About
               </Link>
               <Link
-                to="/experience"
+                to="/#experience"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Experience
               </Link>
               <Link
-                to="/projects"
+                to="/#projects"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Projects
               </Link>
               <Link
-                to="/contact"
+                to="/#contact"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 Contact
@@ -72,7 +72,7 @@ function Layout() {
             {/* Social links */}
             <div className="flex items-center gap-4">
               <a
-                href="https://github.com"
+                href="https://github.com/SahanDhanujaya"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -81,7 +81,7 @@ function Layout() {
                 <Github className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/sahan-dhanujaya-040aa4359/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
@@ -90,7 +90,7 @@ function Layout() {
                 <Linkedin className="w-5 h-5" />
               </a>
               <Link
-                to="/contact"
+                to="/#contact"
                 className="text-muted-foreground hover:text-foreground transition-colors"
                 aria-label="Contact"
               >
