@@ -131,7 +131,7 @@ function Experience() {
         </div> */}
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in-up border border-purple-300">
             <Briefcase className="w-4 h-4" />
             Professional Journey
           </div>
@@ -193,7 +193,7 @@ function Experience() {
                             </div>
                           </div>
                         </div>
-                        <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+                        <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-purple-300">
                           {exp.type}
                         </span>
                       </div>

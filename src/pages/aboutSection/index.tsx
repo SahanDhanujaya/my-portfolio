@@ -9,7 +9,8 @@ import {
   User,
   ArrowRight,
 } from 'lucide-react'
-import profilePic from '/public/assets/pictures/my-pic.png'
+import profilePic from '/public/assets/pictures/about-pic.png'
+import { AnimateOnScroll } from '@/components/AnimateOnScroll'
 // import { GravityStarsBackground } from '@/components/animate-ui/components/backgrounds/gravity-stars'
 
 function About() {
@@ -45,9 +46,13 @@ function About() {
 
             {/* Content */}
             <div className="text-center lg:text-left order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in-up">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in-up border border-purple-500">
                 <User className="w-4 h-4" />
-                About Me
+                <AnimateOnScroll animation="fade-up" delay="0.1s">
+                    <h1> About Me</h1>
+                  </AnimateOnScroll>
+                
+               
               </div>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-4 animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
                 Sahan Dhanujaya

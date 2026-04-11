@@ -12,6 +12,7 @@ import {
   Hotel,
   Laptop,
 } from "lucide-react";
+import { toast } from "sonner";
 
 const projects = [
   {
@@ -117,6 +118,11 @@ const projects = [
 ];
 
 function Projects() {
+  function handleDemo(event: React.MouseEvent<HTMLButtonElement>): void {
+    event.preventDefault();
+    toast.info("Function not allowed.");
+  }
+
   return (
     <div id="projects" className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -139,7 +145,7 @@ function Projects() {
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 animate-fade-in-up border border-purple-300">
             <Code className="w-4 h-4" />
             Portfolio Projects
           </div>
@@ -182,7 +188,7 @@ function Projects() {
                     >
                       <project.icon className="w-7 h-7" />
                     </div>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
+                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border border-purple-300">
                       {project.stack}
                     </span>
                   </div>
@@ -238,7 +244,7 @@ function Projects() {
                         <Github className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
                         <a target="_blank" className="cursor-pointer" href={project.githubLink}>View Code</a>
                       </Button>
-                    <Button variant="outline" size="sm" className="group">
+                    <Button onClick={(event)=>handleDemo(event)} variant="outline" size="sm" className="group">
                       <ExternalLink className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
                       Live Demo
                     </Button>

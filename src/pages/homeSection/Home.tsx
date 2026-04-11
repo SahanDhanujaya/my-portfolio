@@ -15,7 +15,7 @@ import {
   Code as CodeIcon,
   Cloud,
 } from "lucide-react";
-import profilePic from '/public/assets/pictures/my-pic.png'
+import heroPic from '/public/assets/pictures/hero-pic.png'
 // import { HeroGallery } from "@/components/gallery/HeroGallery";
 // import { GravityStarsBackground } from "@/components/animate-ui/components/backgrounds/gravity-stars";
 // import {
@@ -326,7 +326,7 @@ function Home() {
                 <div className="relative rounded-2xl overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/10 group-hover:border-primary/30 group-hover:shadow-primary/20 transition-all duration-500">
                   <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10" />
                   <img
-                    src={profilePic}
+                    src={heroPic}
                     alt="Profile"
                     className="w-full max-w-md h-auto object-cover aspect-[3/4] group-hover:scale-105 transition-transform duration-500"
                   />
